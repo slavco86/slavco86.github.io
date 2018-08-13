@@ -1,1 +1,44 @@
-Hello World
+<div id="app"></div>
+<script async>
+  var baseUri = '//jdsports-client-resources.co.uk/jdsports-client-resources/page/adidas-hub-temp/';
+  var stamp = new Date(Math.round(new Date().getTime() / (1000 * 60 * 1)) * (1000 * 60 * 1)).getTime();
+  var script = document.createElement('script');
+  script.src = baseUri + 'app-loader.js?c=' + stamp;
+  script.setAttribute('data-root', baseUri);
+  document.head.appendChild(script);
+</script>
+<style>
+header,
+#uspAll {
+  position: fixed;
+  width: 100%;
+}
+header {
+  z-index: 1 !important;
+}
+
+#uspAll {
+  z-index: 0;
+}
+
+#bannersAll {
+  z-index: unset;
+}
+
+#bannersAll .banRow .banGrid {
+  overflow: initial;
+  transform: none;
+}
+
+#landingPageContent {
+  min-height: 100vh;
+}
+
+#footerSocial,
+#footerCTAs,
+#footerInfoLinks,
+#footerCopy,
+#translate {
+  display: none;
+}
+</style>
